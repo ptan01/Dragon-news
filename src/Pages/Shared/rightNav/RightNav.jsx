@@ -4,6 +4,7 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import QZone from '../QZone/QZone';
 import bg from '../../../assets/bg.png'
 import './rightNav.css'
+import { FaFacebook , FaTwitter , FaInstagram } from 'react-icons/fa';
 
 const RightNav = () => {
     return (
@@ -14,9 +15,9 @@ const RightNav = () => {
             <div>
                 <h4 className='my-3'>Find Us On</h4>
                 <ListGroup>
-                    <ListGroup.Item>Facebook</ListGroup.Item>
-                    <ListGroup.Item>Twitter</ListGroup.Item>
-                    <ListGroup.Item>Instagram</ListGroup.Item>
+                    <ListGroup.Item> <FaFacebook/>Facebook</ListGroup.Item>
+                    <ListGroup.Item> <FaTwitter/> Twitter</ListGroup.Item>
+                    <ListGroup.Item> <FaInstagram/> Instagram</ListGroup.Item>
                 </ListGroup>
             </div>
             <QZone></QZone>

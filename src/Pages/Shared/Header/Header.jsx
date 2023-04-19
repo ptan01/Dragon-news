@@ -13,13 +13,13 @@ const Header = () => {
         <h5>{moment().format("dddd, MMMM D, YYYY")}</h5>
       </div>
       <Container>
-        <div className='d-flex'>
+        <div className='d-flex my-3'>
           <Button variant="danger">Latest</Button>
           <Marquee pauseOnHover='boolean' >
             I can be a React component, multiple React components, or just some text. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quas totam officiis perferendis voluptatum nobis iusto maiores, temporibus exercitationem dolores magni. Rem minus necessitatibus voluptate quasi esse doloremque amet atque.
           </Marquee>
         </div>
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" className='my-4' variant="light">
           <Container>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
