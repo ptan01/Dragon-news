@@ -1,0 +1,19 @@
+
+.bg-container{
+    display: relative;
+}
+
+.text-container{
+    display: absolute;
+    top: 500px;
+    bottom: 200px;
+}
+.bg-img{
+    background-image: url(../../../assets/bg.png);
+    height: 600px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
