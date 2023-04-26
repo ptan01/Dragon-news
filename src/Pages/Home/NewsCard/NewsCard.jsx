@@ -6,7 +6,7 @@ import { FaRegBookmark, FaShareAlt, FaEye , FaStar , FaRegStar} from 'react-icon
 import Rating from 'react-rating';
 
 const NewsCard = ({ news }) => {
-    console.log(news)
+   
     const { _id, title, details, author, others_info, rating, total_view, image_url } = news;
 
     return (
@@ -27,7 +27,7 @@ const NewsCard = ({ news }) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Img variant="top" src={image_url} />
                 <Card.Text>
-                    <p>{details.length > 250 ? details.slice(0, 250) : details}...<Link to={`/news/:${_id}`}>Read More</Link></p>
+                    <p>{details.length > 250 ? details.slice(0, 250) : details}...<Link to={`/news/${_id}`}>Read More</Link></p>
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="text-muted d-flex align-items-center">
