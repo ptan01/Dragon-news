@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 const Register = () => {
 
     const {createUser} = useContext(AuthContext) 
+    const [checked , setChecked] = useState(null)
 
     const handleRegister = (e)=>{
         e.preventDefault()
@@ -15,8 +16,7 @@ const Register = () => {
         const photo = form.photo.value ;
         const email = form.email.value ;
         const pass = form.password.value ;
-        const checkbox = form.checkbox.value ;
-        console.log(name , photo, email , pass, checkbox)
+        console.log(name , photo, email , pass)
 
         createUser(email, pass)
         .then((result )=>{
@@ -27,6 +27,13 @@ const Register = () => {
             console.log(err.message)
         })
     }
+
+    const handleCheckbox = (e)=>{
+        const isChecked = e.target.checked
+        setChecked(isChecked)
+    }
+
+    console.log(checked)
 
     return (
         <Container>
@@ -54,10 +61,10 @@ const Register = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" name='checkbox' label="Accept Term & Conditions" />
+                        <Form.Check onClick={handleCheckbox} type="checkbox" name='checkbox' label={<>Accept <Link to='/terms'>Term & Conditions</Link></>} />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button disabled={!checked} variant="primary" type="submit">
                         Register
                     </Button>
                     <p>Already Have An Account ? <Link to='/login'>Login</Link></p>
