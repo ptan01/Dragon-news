@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div>
       <div className='text-center'>
-        <img src={logo} alt="" />
+        <img className='img-fluid' src={logo} alt="" />
         <p>Journalism Without Fear or Favour</p>
         <h5>{moment().format("dddd, MMMM D, YYYY")}</h5>
       </div>
